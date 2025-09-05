@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table3_test</title>
+    <style>
+        .col1{background-color: yellow;}
+        .col2{background-color: aquamarine;}
+        .col3{background-color: orange;}
+    </style>
+</head>
+<body>
+    <table border="1">
+        <caption>방한 횟수별 한국 여행시 좋았던 점(단위 : 명)</caption>
+        <colgroup>                              <!--열을 그룹이로 묶을 수 있도록 해주는 태그-->
+            <col span="1" class="col1" />       <!--colgroup의 자손으로 열단위를 나눌 수 있다. span속성을 이용하여 몇 열을 그룹으로 묶을지 설정-->
+            <col span="2" class="col2" />
+            <col span="3" class="col3" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th>방한 횟수</th>
+                <th>편리한 교통</th>
+                <th>친절한 사람들</th>
+                <th>독특한 문화유산</th>
+                <th>맛있는 음식</th>
+                <th>다양한 쇼핑</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1회</td>
+                <td>3,700</td>
+                <td>4,200</td>
+                <td>3,700</td>
+                <td>4,100</td>
+                <td>4,900</td>
+            </tr>
+            <tr>
+                <td>2회</td>
+                <td>3,100</td>
+                <td>4,000</td>
+                <td>3,500</td>
+                <td>4,700</td>
+                <td>4,200</td>
+            </tr>
+            <tr>
+                <td>3회</td>
+                <td>3,500</td>
+                <td>4,500</td>
+                <td>3,200</td>
+                <td>5,000</td>
+                <td>3,900</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>합계</td>
+                <td>10,300</td>
+                <td>12,700</td>
+                <td>10,400</td>
+                <td>13,800</td>
+                <td>13,000</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

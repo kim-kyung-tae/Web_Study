@@ -1,0 +1,80 @@
+1. 새 html 파일 생성하기
+   1) File -> New File
+   2) File -> Save As로 파일명.html로 저장
+   3) 느낌표(!) 누르고 엔터치면 기본 html형식의 서식이 생성됨
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+   </head>
+   <body>
+    
+   </body>
+   </html>
+
+2. html형식의 서식 수정하기
+   1) <html lang="en">을 <html lang="ko">로 수정, 영어에서 한국어로 수정됨
+   2) HEAD 태그사이의 meta 테그가 존재하며 다음과 같은 의미가 있다.
+       <meta charset="UTF-8"> --> 문자 코드 종류 설정
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"> --> 모바일 반응 페이지
+       <meta http-equiv="X-UA-Compatible" content="IE=edge"> --> 브아우저 호환성이며 이부분을 추가한다.
+       <title>Document</title> --> 웹페이지 상단의 이름으로 표시
+
+3. css 폴더를 생성하고 New File로 파일.css 파일을 생성한다. wilc.css 파일을 생성해 본다.
+4. 생성된 스타일쉬트 파일(css 파일)을 HEAD 테그에 link한다.
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TESCON WILC</title>
+        <link rel="stylesheet" href="Css/wilc.css">
+    </head>
+    <body>
+    
+    </body>
+    </html>
+
+5. CSS는 웹 문서의 스타일과 레이아웃을 정의하는 스타일 시트 언어이다.
+
+6. CSS 사용방법
+    1) 인라인 스타일: <style> 태그를 사용하여 HTML요소 내부에 CSS코드를 직접 작성하는 방법
+    2) 내부 스타일 시트 : <head> 섹션 내에 <style>태그를 사용하여 CSS 코드를 작성하는 방법
+    3) 외부 스타일 시트 : 별도의 CSS 파일을 만들고 HTML 문서와 연결하여 사용하는 방법
+
+7. CSS 기본 문법
+
+    셀렉터 {
+                선언 블록
+                color: green;
+                font-size: 24px;
+                background-color: black;
+    }
+    위에서 color, font-size 등은 속성명(Propety)이고 green, 24px등은 속성값이다.
+
+    셀렉터를 id 혹은 class로 지정하여 사용한다.
+
+    article{
+        width:264px; 
+        height:77px; 
+        line-height: 77px; 
+        border-radius: 5px;
+    }
+    
+    #article{
+        background-color:hotpink;
+    }
+
+    .article{      // class 지정
+        background-color:skyblue;
+    }
+
+    id 속성은 웹페이지 내의 유일한 요소에 지정하고 class의 경우는 웹페이지 내의 여러 요소에 지정할 수 있다.
+
+
+
+

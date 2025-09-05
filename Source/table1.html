@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table1_test</title>
+</head>
+<body>
+    <table border="1">             <!--table전체를 감싸는 태그-->
+        <caption>표제목</caption>   <!--table 제목이나 설명을 작성하는 태그.테이블 가로폭의 가운데 오는 것이 기본-->
+        <tr>                        <!--테이블의 행을 의미하는 태그-->
+            <th>제목셀1</th>        <!--테이블의 제목 칸을 의미하는 태그-->
+            <th>제목셀2</th>
+        </tr>
+        <tr>
+            <td>일반칸1</td>        <!--테이블의 일반 칸을 의미하는 테그-->
+            <td>일반칸2</td>
+        </tr>
+    </table>
+
+    <table border="1" width="500" cellpadding="20" cellspacing="10">      
+        <caption>표제목</caption>   
+        <tr>                
+            <th>제목셀1</th>        
+            <th>제목셀2</th>
+        </tr>
+        <tr>
+            <td>일반칸1</td>       
+            <td>일반칸2</td>
+        </tr>
+    </table>
+
+    <table border="1">      
+        <caption>표제목</caption>  
+        <tr>                
+            <th width="200" height="50" align="right">제목셀1</th>        
+            <th widht="300" height="50" valign="bottom">제목셀2</th>
+        </tr>
+        <tr>
+            <td widht="200">일반칸1</td>        
+            <td widht="300">일반칸2</td>
+        </tr>
+    </table>
+
+    <table border="1">      
+        <caption>표제목</caption>   
+        <tr>                
+            <th colspan="3">제목셀1</th>        <!--같은 행의 칸들을 병합할 때 사용-->        
+        </tr>
+        <tr>
+            <td>일반칸1</td>        
+            <td>일반칸2</td>
+            <td>일반칸3</td>
+        </tr>
+    </table>
+
+    <table border="1">      
+        <caption>표제목</caption>   
+        <tr>                
+            <th rowspan="2">제목셀1</th>        <!--다른 행의 칸들을 병합할 때 사용-->
+            <th>제목셀2</th>
+            <th>제목셀3</th>
+        </tr>
+        <tr>
+            <td>일반칸2</td>       
+            <td>일반칸3</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form test1</title>
+</head>
+<body>
+    <form action="#" method="post">     <!--action:데이터내용을 전송할 때 보낼질 서버 페이잊 주소  #은 임시주소를 의미함-->
+        <fieldset>      <!--폼의 구역을 나눔-->                  
+            <legend>필수입력항목</legend>       <!--폼 구역의 이름을 작성-->
+            폼양식
+        </fieldset>
+        <fieldset>
+            <legend>선택입력항목</legend>
+            폼양식
+        </fieldset>
+        <input type="text"><br>         <!--한줄 텍스트를 입력할 수 있는 상자-->
+        <input type="password"><br>     <!--텍스트 입력시 암호화처리되어 표시시하는 상자-->
+        <input type="checkbox"><br>     <!--체크시 체크되는 네모박스-->
+        <input type="radio"><br>        <!--체크시 체크되는 원형박스-->
+        <input type="button" value="우편번호찾기"><br>  <!--버튼 형대의 기본 형태-->
+        <input type="reset" value="입력취소"><br>       <!--폼의 테이터를 입력취소하는 버튼-->
+        <input type="submit" value="회원가입"><br>      <!--폼의 데이터를 서버에 전송하는 버튼-->
+        <input type="image" src="/image/btn_write_b.gif" alt="쓰기버튼"><br>    <!--버튼의 형태중 이미지를 삽입할 수 있는 버튼-->
+        <input type="file">             <!--컴퓨터의 파일을 찾아주는 버튼-->
+    </form>
+</body>
+</html>

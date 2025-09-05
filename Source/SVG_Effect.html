@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg effect</title>
+</head>
+<body>
+    <svg width="150" height="150">
+        <rect x="10" y="10" width="90" height="90" stroke="green" stroke-width="3" fill="yellow" />
+    </svg>
+    <svg width="150" height="150">
+        <defs>
+            <filter id="f1" x="0" y="0">
+            <!--filter 태그의 아이디를 추후에 벡터태그들에 filter효과의 이름으로 줄수 있다-->    
+                <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+                <!-- 블러 효과는 feGuassianBlru 요소로 정의됨-->
+                <!--stdDeviation속성은 흐림 정도를 정의함.수치가 높을 수록 많이 번진다.--> 
+            </filter>
+        </defs>
+        <rect x="10" y="10" width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f1)"/>
+        <!--rect태그에 filter속성으로 <filter>태그의 아이디값을 정의해 주면 효과가 들어감-->
+    </svg>
+    <svg width="150" height="150">
+        <defs>
+            <filter id="f2" x="0" y="0" width="200%" height="200%">
+                <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
+                <!--<feoffSet>요소는 그림자 효과를 만드는데 사용됨. in="SourceGraphic"은 SVG 그래픽을 가져와서 그림자처리를 한다는 것임
+                    dx, dy속성은 요소를 이동하는 것임-->
+                <feBlend in="SourceGraphic" in2="offOut" mode="normal" />
+                <!--<feBlend>는 원본 그래픽을 가져와 오프셋 이미지 위에 원본을 혼합한다-->
+            </filter>
+        </defs>
+        <rect x="10" y="10" width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f2)"/>
+    </svg>
+    <svg width="150" height="150">
+        <defs>
+            <filter id="f3" x="0" y="0" width="200%" height="200%">
+                <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
+                <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+                <!--<feGaussianBlur>태그를 추가하여 <feOffset>의 result를 in으로 사용하고-->
+                <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+                <!--<feGaussianBlur>태그를 추가하여 <feBlend>의 in2속성에 result를 사용한다-->
+            </filter>
+        </defs>
+        <rect x="10" y="10" width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f3)"/>
+    </svg>
+    <svg width="150" height="150">
+        <defs>
+            <filter id="f4" x="0" y="0" width="200%" height="200%">
+                <feOffset result="offOut" in="SourceAlpha" dx="20" dy="20" />
+                <!--<feOffset>요소에 in 속성이 전체 RGBA픽셀 대신 흐림에 알파 채널을 사용한 "SourceAlpha"로 변경-->
+                <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+                <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+            </filter>
+        </defs>
+        <rect x="10" y="10" width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f4)"/>
+    </svg>
+    <svg width="150" height="150">
+        <defs>
+            <filter id="f5" x="0" y="0" width="200%" height="200%">
+                <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
+                <feColorMatrix result="matrixOut" in="offOut" type="matrix" 
+                vlaue="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" />
+                <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="10" />
+                <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+            </filter>
+        </defs>
+        <rect x="10" y="10" width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f5)"/>
+    </svg>
+    <hr>
+    <svg width="400" height="150">
+        <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:rgb(255,255,0); stop-opacity:1;" />
+                <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1;" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+    </svg>
+    <svg width="400" height="150">
+        <defs>
+            <radialGradient id="grad2" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                <stop offset="0%" style="stop-color:rgb(255,255,255);stop-opacity:0;" />
+                <stop 0ffset="100%" style="stop-color:rgb(0,0,255);stop-opacity:1;" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad2)" />
+    </svg>
+</body>
+</html>

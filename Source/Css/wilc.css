@@ -1,0 +1,27 @@
+.headstyle{
+    background-color: rgb(81, 150, 240);
+    color: #fdf8f8;
+    width: 100%;
+    font-size: large;
+    height: 50px;
+}
+
+.navbar{
+    margin: 10px;
+    float: left;
+    font-size: medium;
+    font-weight: bolder
+}
+
+.navbar2{
+    margin: 15px;
+    float: left;
+    font-size: medium;
+    
+}
+
+.navbar3{
+    margin: 15px;
+    float: right;
+    font-size: medium;
+}

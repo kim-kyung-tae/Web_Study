@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg path text</title>
+</head>
+<body>
+    <svg width="400" height="210">
+        <path d="M150 0 L75 200 L225 200 Z" />
+        <!--M:이동좌표,L:선길이,Z:가까운경로-->
+    </svg>
+    <svg width="400" height="400">
+        <path d="M 20 350 q 150 -300 300 0" stroke="blue" stroke-width="5" fill="none" />
+        <!--q:2차 베지어 곡선, Q는 영역안에 절대좌표,q는 현재위치부터 상대좌표이다-->
+    </svg>
+    <hr>
+    <svg width="200" height="30">
+        <text x="0" y="15" fill="red">I Love GEODONG</text>
+    </svg>
+    <svg width="200" height="90">
+        <text x="0" y="15" fill="red" transform="rotate(30,20,40)">I Love GEODONG</text>
+        <!--transform속성은 이미 만들어진 태그 혹은 이미지를 늘리적나 회전 시간킬 때 사용-->
+    </svg>
+    <svg width="200" height="90">
+        <text x="10" y="20" style="fill:red;">Several line:
+            <tspan x="10" y="45">First line.</tspan>
+            <!--text혹은 textPath안에서는 tspan 사용(span은 동작안함)-->
+            <tspan x="10" y="70">Second line.</tspan>
+        </text>
+    </svg>
+    <hr>
+    <svg width="1000" height="400">
+        <path style="fill:transparent;stroke:crimson;stroke-width:5;"
+        d="M 10 300 Q 100 250 200 300 q 100 50 200 0 q 100 -50 200 0 q 100 50 200 0 q 100 -50 150 0"></path>
+        <text style="fill:dodgerblue;font-size:17;font-weight:5;" x="10" y="100">Lorem ipsum dolor sit amet,
+            consectertur adipisicing elit. Ab suscipitrem similique quis et ad rerum iste in illum natus!</text>
+    </svg>
+    <hr>
+    <svg width="1000" height="400">
+        <defs>
+            <path id="text-curve" style="fill:transparent;stroke:crimson;stroke-width:5;"
+            d="M 10 300 Q 100 250 200 300 q 100 50 200 0 q 100 -50 200 0 q 100 50 200 0 q 100 -50 150 0"></path>
+        </defs>
+        <!--<defs>태그는 나중에 참조할 그래픽 요소 같은 것을 담아놓는 공간이다-->
+        
+        <text style="fill:dodgerblue;font-size:17;font-weight:5;" x="10" y="100">
+            <textPath href="#text-curve">
+                Lorem ipsum dolor <tspan style="font-size:50;">sit amet,</tspan> consectertur adipisicing elit. Ab suscipitrem similique quis 
+                et ad rerum iste in illum natus!
+            </textPath> 
+            <!--<path>태크로 정의된 이미지에 text요소를 추가하는 기능이 <textPath> ?? path의 id와 textPath의 href로 연결-->
+        </text>
+    </svg>
+</body>
+</html>

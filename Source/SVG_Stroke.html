@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg stroke</title>
+</head>
+<body>
+    <svg width="300" height="80">
+        <g fill="none" stroke="black">
+        <!--g태그는 그룹을 의미하는 태그이다. stroke 속성은 선의 색을 설정이며 그룹에 설정하면 그룹의 모든 path에 적용됨-->    
+            <path stroke-width="2" d="M 5 20 l 215 0" />
+            <!--M은 이동경로의 시작점, L은 선길이 절대좌표, 소문자 l은 상태좌표.-->
+            <path stroke-width="4" d="M 5 40 l 215 0" />
+            <path stroke-width="6" d="M 5 60 l 215 0" />
+            <!--stroke-width는 선의 굵기를 설정-->
+        </g>
+    </svg>
+    <svg width="300" height="120">
+        <g fill="none" stroke="black" stroke-width="20">
+            <path stroke-linecap="butt" d="M 5 20 l 215 0" />
+            <!--stroke-linecap 속성은 선의 가장자리의 처리를 한다 butt는 선끝을 딱 자름-->
+            <path stroke-linecap="round" d="M 5 60 l 215 0" />
+            <!--round는 선끝을 둥글게 처리함-->
+            <path stroke-linecap="square" d="M 5 100 l 215 0" />
+            <!--square는 선끝을 네모로 한번 더 묶음 처리-->
+        </g>
+    </svg>
+    <svg width="300" height="80">
+        <g fill="none" stroke="black" stroke-width="4">
+            <path stroke-dasharray="5,5" d="M 5 20 l 215 0" />
+            <!--stroke-dasharray속성은 점선을 표시하는 속성이다-->
+            <path stroke-dasharray="10,10" d="M 5 40 l 215 0" />
+            <path stroke-dasharray="20,10,5,5,5,10" d="M 5 60 l 215 0" />
+        </g>
+    </svg>
+    <svg width="300" height="80">
+        <g fill="none" stroke="black" stroke-width="4" stroke-dasharray="20,10">
+            <path d="M 5 20 l 215 0" stroke-dashoffset="0" />
+            <!--stroke-dashoffset속성은 점선을 어디서 부터 보여줄지를 지정한다-->
+            <path d="M 5 40 l 215 0" stroke-dashoffset="10" />
+            <path d="M 5 60 l 215 0" stroke-dashoffset="20" />
+        </g>
+    </svg>
+</body>
+</html>

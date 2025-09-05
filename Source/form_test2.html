@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form test2</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>기본 선택 상자</legend>
+            <select>            <!--선택 옵션들을 묶는 역활을 하는 태그-->
+                <option>점심 메뉴</option>      <!--옵션 값 한개한개를 담는 태그-->
+                <option>김치 찌게</option>
+                <option selected>초밥</option>  <!--selected는 옵션값의 기본이 된다. 없으면 첫번째 옵션이 기본이다-->
+                <option>짜장면</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>그룹 선택 상자</legend>
+            <select>
+                <optgroup label="중식">         <!--옵션이 여러 그룹으로 되어 있을 때 그룹으로 묶는 태그-->
+                    <option>짜장면</option>  
+                    <option>짬뽕</option>      
+                </optgroup>
+                <optgroup label="일식">         <!--label은 optgroup의 이름이 되는 속성이다-->
+                    <option>초밥</option>
+                    <option>모밀</option>
+                </optgroup>
+                <optgroup label="한식">
+                    <option>김치 찌게</option>
+                    <option>비빔밥</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        
+        <textarea cols="30" rows="10"></textarea>
+        <br>
+        <input type="checkbox" id="idChk" />
+        <label for="idChk">아이디 체크하기</label>      <!--input,textarea,select태그의 이름을 붙여주는 테그이며 id와 label의 for값은 같아야 한다-->
+        <hr>
+        <label for="selectbox">선택옵션</label>
+        <select id="selectbox">
+            <option>옵션1</option>
+            <option>옵션2</option>
+            <option>옵션3</option>
+        </select>
+        <hr>
+        <label for="substance">내용</label>
+        <textarea id="substance" cols="30" rows="10"></textarea>
+    </form>
+</body>
+</html>

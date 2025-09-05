@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input test</title>
+    <style>
+        .left{float:left;}
+        .right{float:right;}
+    </style>
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>로그인 폼</legend>
+            <input type="text" maxlength="8" placeholder="아이디입력">
+            <br>
+            <input type="password" maxlength="8" placeholder="비밀번호입력">
+        </fieldset>
+        <fieldset>
+            <legend>수량 선택</legend>
+            <button>-</button>
+            <input type="text" value="1">
+            <button>+</button>
+        </fieldset>
+        <fieldset>
+            <legend>주소 입력</legend>
+            <input type="text" disabled vlaue="서울시 강남구 역삼동">
+            <input type="text" placeholder="나머지 주소">
+        </fieldset>
+        <fieldset>
+            <legend>취미 체크</legend>
+            <input type="checkbox" id="hobby01">
+            <label for="hobby01">게임</label>
+            <input type="checkbox" id="hobby02">
+            <label for="hobby02">영화감상</label>
+            <input type="checkbox" id="hobby03">
+            <label for="hobby03">음주가무</label>
+        </fieldset>
+        <fieldset>
+            <legend>성별 체크</legend>
+            <input type="radio" id="male" neme="gender" checked>    <!--name은 여러 checkbox나 여러 radio값이 하나로 인식될수 있도록 같은 이름 설정-->
+            <label for="male">남자</label><br>
+            <input type="radio" id="female" name="gender">
+            <label for="female">여자</label>
+        </fieldset>
+        <fieldset>
+            <legend>버튼 종류</legend>
+            <input type="text">
+            <hr>
+            <input type="button" value="우편번호찾기">
+            <input type="image" src="/image/btn_write_b.gif" alt="쓰기버튼">
+            <input type="submit" value="회원가입">
+            <input type="reset" value="입력취소" >
+        </fieldset>
+        <fieldset>
+            <input type="button" style="width: 200px;" value="로그인 >>">
+            <button type="button" style="width: 200px;">
+                <span class="left">로그인</span>
+                <span class="right">>></span>
+            </button>
+        </fieldset>
+    </form>
+</body>
+</html>
